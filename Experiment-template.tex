@@ -1,0 +1,119 @@
+% !Mode:: "TeX:UTF-8"
+%% 请使用 XeLaTeX 编译本文.
+% \documentclass{WHUBachelor}% 选项 forprint: 交付打印时添加, 避免彩色链接字迹打印偏淡. 即使用下一行:
+ \documentclass[forprint]{WHUBachelor}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+%
+\newenvironment{st}{\fontfamily{songti}\selectfont}%SimSun
+%\newenvironment{st}{\fontfamily{Times New Roman}\selectfont}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{document}
+%-----------------------------------------------------------------------------
+
+%%%%%%% 下面的内容, 据实填空.
+
+\Ccoursename{人机交互实验} %课程名称
+\title{HCI Lab:	Assignment 3\\Your Interactors Take Me Heir-archy} %实验名称
+\author{} % 学生姓名
+\Csupervisor{XXXX \quad 副教授} %指导教师一姓名、职称
+\CsupervisorAnother{无} %指导教师二姓名、职称
+\CstudentNum{XXXX} %学号
+\Cmajor{XXXX} % 专业名称
+%\Cschoolname{计算机学院} % 学院名
+\date{二〇一九年六月} % 日期
+
+%-----------------------------------------------------------------------------
+
+\pdfbookmark[0]{封面}{title}         % 封面页加到 pdf 书签
+\maketitle
+\frontmatter
+\pagenumbering{Roman}              % 正文之前的页码用大写罗马字母编号.2019.6.16:更新 正文之前的页码隐藏，无需显示
+%-----------------------------------------------------------------------------
+\include{includefile/frontmatter}    % 加入摘要, 申明.
+%==========================把目录加入到书签==============================%%%%%%
+
+
+%\pdfbookmark[0]{目录}{toc}
+
+
+%\pagestyle{empty}
+\tableofcontents
+\thispagestyle{empty}
+%\thispagestyle{empty}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+
+
+
+
+\mainmatter %% 以下是正文
+%%%%%%%%%%%%%%%%%%%%%%%%%%%--------main matter-------%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}%plain
+%\cfoot{\thepage{\zihao{5}\bf\usefonttimes}}
+%\renewcommand{\baselinestretch}{1.6}
+%\setlength{\baselineskip}{23pt}
+\baselineskip=23pt  % 正文行距为 23 磅
+
+%此处书写正文
+
+
+\include{includefile/backmatter} %%%结论
+
+%%%============================================================================================================%%%
+
+%%%=== 参考文献 ========%%%
+\cleardoublepage\phantomsection
+\addcontentsline{toc}{chapter}{参考文献}
+\renewcommand{\baselinestretch}{1.6}
+\begin{thebibliography}{00}
+
+\bibitem{mapreduce} Dean J, Ghemawat S. MapReduce: Simplified Data Processing on Large Clusters[A].Eric A. Brewer, Peter Chen.6th Symposium on Operating Systems Design and Implementation(OSDI 2004)[C], San Francisco, California, USA: {USENIX} Association, 2004:137--150.
+
+\end{thebibliography}
+
+
+
+%%%-------------- 附录. 不需要可以删除.-----------
+
+
+%%%-------------- 教师评语评分 ------------------
+\begin{teacher}
+\thispagestyle{empty}
+评语: 
+\par
+\vspace*{10.5cm}
+\hspace*{7.5cm}评分: 
+\vspace*{1cm}
+
+\hspace*{7.3cm}评阅人:
+
+\vspace*{0.5cm}
+
+\hspace*{10.1cm}年\hspace*{1cm}月\hspace*{1cm}日
+
+\vspace*{0.5cm}
+
+{\songti \zihao{4} \makebox[1cm][s]{（备注：对该实验报告给予优点和不足的评价，并给出百分制评分。）}}
+
+\end{teacher}
+
+
+\cleardoublepage
+\end{document}
+
+
+
+
+
