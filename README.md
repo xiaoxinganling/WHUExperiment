@@ -17,6 +17,7 @@
 
 ##### 其他
 
+- 更加详细的介绍请参看 [QuickStart](https://xiaoxinganling.github.io/2019/06/26/WHU-LaTeX/#start)
 - 持续更新中......
 - 如有疑问，请联系 mxzhou1998@gmail.com
 
